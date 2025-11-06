@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobe's Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and apply a dark brown/amber aesthetic -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* New Dark Brown Background */
+            background-color: #2C2524; 
+            /* New Light Cream/White Text */
+            color: #F7F0E8; 
+        }
+        /* Custom scroll behavior for smooth navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style the active navigation button on mobile/desktop (using amber accent) */
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.2), 0 2px 4px -2px rgba(245, 158, 11, 0.2);
+        }
+        .text-input-style {
+            background-color: #3f3634; /* Darker neutral background for inputs */
+            border: 1px solid #57534f;
+            color: #f7f0e8;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+            resize: vertical;
+        }
+    </style>
+</head>
+<!-- Updated selection color to amber-500 -->
+<body class="selection:bg-amber-500 selection:text-neutral-900">
+
+    <!-- Sticky Navigation Bar (using neutral-900 for a very dark base) -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-neutral-900 bg-opacity-95 backdrop-blur-sm shadow-xl p-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Portfolio Title (using amber-400) -->
+            <h1 class="text-3xl font-extrabold text-amber-400 mb-4 md:mb-0 tracking-tight">Kobe's Portfolio</h1>
+
+            <!-- Navigation Buttons -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <!-- Highlight active button with amber-600 -->
+                <button onclick="scrollToSection('about-me')" class="nav-button transition-all duration-300 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+                    Get to Know Me
+                </button>
+                <button onclick="scrollToSection('skills')" class="nav-button transition-all duration-300 bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+                    Skills
+                </button>
+                <button onclick="scrollToSection('photos')" class="nav-button transition-all duration-300 bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+                    My Photos
+                </button>
+                <button onclick="scrollToSection('works')" class="nav-button transition-all duration-300 bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
+                    Works
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Sections -->
+    <main class="max-w-7xl mx-auto p-6 md:p-10">
+
+        <!-- 1. Get to Know Me (Personal Story) Section - Updated Content & Colors -->
+        <section id="about-me" class="min-h-screen pt-20 flex items-center">
+            <!-- Updated card color to a warm neutral-800, and shadow color to amber -->
+            <div class="bg-neutral-800 rounded-xl p-8 shadow-2xl transition-all duration-500 hover:shadow-amber-500/30">
+                <!-- Updated title color and border to amber -->
+                <h2 class="text-5xl font-bold text-amber-400 mb-6 border-b-2 border-amber-500 pb-2">Get to Know Me: My Personal Story</h2>
+                <div class="text-lg leading-relaxed space-y-4">
+                    <!-- Updated Personal Story -->
+                    <p>
+                        Hey, I'm Kobe, the creator I'm 17 years old, and my passion lies in bringing ideas to life through digital mediums. I specialize in website development, graphic design, and video editing. Beyond technical skills, I enjoy helping people brainstorm and create fun, engaging titles and concepts for videos.
+                    </p>
+                    <p>
+                        I'm a highly organized person and I often find myself organizing my personal schedules and even my email inbox just for fun! This attention to detail extends to my work. I'm also proficient in public speaking, essay writing, and managing complex tasks effectively.
+                    </p>
+                    <p>
+                        Growing up in a financially struggling family wasn't a setback; I see it as a stepping stone to a future milestone. This experience made me resilient, more creative, and intensely curious about the world and how things work. It's the fuel for my constant learning.
+                    </p>
+                    <!-- Updated accent text color to amber-300 -->
+                    <p class="text-xl font-medium text-amber-300">
+                        Outside of creating, my hobbies include reading manhwa, spending time with friends, and simply enjoying life!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Skills Section - Updated Colors -->
+        <section id="skills" class="min-h-screen pt-20 flex items-center">
+            <!-- Updated card background and shadow color -->
+            <div class="w-full bg-neutral-800 rounded-xl p-8 shadow-2xl transition-all duration-500 hover:shadow-amber-500/30">
+                <!-- Updated title color and border to amber -->
+                <h2 class="text-5xl font-bold text-amber-400 mb-8 border-b-2 border-amber-500 pb-2">Technical Skills & Expertise</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Design Skills Card (updated card color) -->
+                    <div class="bg-neutral-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-3xl font-semibold text-white mb-4">Design (Visual & UI/UX)</h3>
+                        <ul class="list-disc list-inside space-y-2 text-neutral-300">
+                            <li>Adobe Photoshop & Illustrator</li>
+                            <li>Figma & Sketch (Wireframing/Prototyping)</li>
+                            <li>Poster & Branding Design</li>
+                            <li>Typography & Color Theory</li>
+                        </ul>
+                    </div>
+
+                    <!-- Front-end Skills Card (updated card color) -->
+                    <div class="bg-neutral-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-3xl font-semibold text-white mb-4">Front-End Development</h3>
+                        <ul class="list-disc list-inside space-y-2 text-neutral-300">
+                            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                            <li>Tailwind CSS & Bootstrap</li>
+                            <li>Responsive Web Design</li>
+                            <li>Basic React/Vue Knowledge</li>
+                        </ul>
+                    </div>
+
+                    <!-- Other Skills Card (updated card color) -->
+                    <div class="bg-neutral-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h3 class="text-3xl font-semibold text-white mb-4">Other Competencies</h3>
+                        <ul class="list-disc list-inside space-y-2 text-neutral-300">
+                            <li>**Virtual Assisting** (Scheduling, Email Management, Data Entry, Content Formatting)</li>
+                            <li>Git & GitHub (Version Control)</li>
+                            <li>Basic SEO Principles</li>
+                            <li>Problem Solving & Debugging</li>
+                            <li>Microsoft Office Suite</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. My Photos (Poster Designs) Section - Updated Colors -->
+        <section id="photos" class="min-h-screen pt-20">
+            <!-- Updated title color and border to amber -->
+            <h2 class="text-5xl font-bold text-amber-400 mb-10 border-b-2 border-amber-500 pb-2">My Photos: Poster Designs</h2>
+
+            <!-- Poster Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example Poster Card 1 (updated card color and shadow) -->
+                <div class="group bg-neutral-800 rounded-xl overflow-hidden shadow-xl hover:shadow-amber-500/50 transition-all duration-300">
+                    <img src="eventposter.png" alt="Conceptual Poster Design" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="this.onerror=null;this.src='https://placehold.co/600x800/222/fff?text=Poster+Design+1';">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-white">Conceptual Event Poster</h3>
+                        <p class="text-neutral-400 text-sm">A minimal design using bold typography and dynamic color separation.</p>
+                    </div>
+                </div>
+
+                <!-- Example Poster Card 2 (updated card color and shadow) -->
+                <div class="group bg-neutral-800 rounded-xl overflow-hidden shadow-xl hover:shadow-amber-500/50 transition-all duration-300">
+                    <img src="geometric.png" alt="Geometric Art Poster" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="this.onerror=null;this.src='https://placehold.co/600x800/222/fff?text=Poster+Design+2';">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-white">Geometric Abstraction</h3>
+                        <p class="text-neutral-400 text-sm">Exploration of form and symmetry in a vibrant, modern style.</p>
+                    </div>
+                </div>
+
+                <!-- Example Poster Card 3 (updated card color and shadow) -->
+                <div class="group bg-neutral-800 rounded-xl overflow-hidden shadow-xl hover:shadow-amber-500/50 transition-all duration-300">
+                    <input type="image" src="typographics.png"
+                  
+                              " alt="Typographic Quote Poster" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]" onerror="this.onerror=null;this.src='https://placehold.co/600x800/222/fff?text=Poster+Design+3';">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-white">Typographic Quote</h3>
+                        <p class="text-neutral-400 text-sm">Focus on hierarchy and expressive lettering to convey a message.</p>
+                    </div>
+                </div>
+            </div>
+          
+
+        <!-- 4. Works (Web Designs) Section - Updated Colors -->
+        <section id="works" class="min-h-screen pt-20">
+            <!-- Updated title color and border to amber -->
+            <h2 class="text-5xl font-bold text-amber-400 mb-10 border-b-2 border-amber-500 pb-2">Works: Web Designs & Projects</h2>
+            
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Example Project Card 1 (Startup Landing Page) -->
+                <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-xl p-6 hover:ring-2 ring-amber-500 transition-all duration-300">
+                    <h3 class="text-3xl font-semibold text-white mb-2">Project: Startup Landing Page</h3>
+                    <p class="text-neutral-400 mb-4">A fully responsive landing page designed for a hypothetical tech startup, focusing on clean UI/UX and high conversion.</p>
+                    <!-- 1. REPLACE THIS IMAGE SOURCE (src) with your project screenshot URL -->
+                    <img src="web.png" alt="Web Design Preview 1" class="w-full h-auto rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/800x450/262626/fff?text=Web+Design+Preview+1';">
+                    <!-- 2. REPLACE THIS LINK (href) with your live project demo URL -->
+                    <a href="https://kobessoriano1-ops.github.io/demo-1/" target="_blank" class="inline-block bg-amber-600 hover:bg-amber-500 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 mt-2">View Case Study / Demo</a>
+                </div>
+
+                <!-- Example Project Card 2 (E-commerce Product Page) -->
+                <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-xl p-6 hover:ring-2 ring-amber-500 transition-all duration-300">
+                    <h3 class="text-3xl font-semibold text-white mb-2">Project: E-commerce Product Page</h3>
+                    <p class="text-neutral-400 mb-4">A mobile-first e-commerce product detail page emphasizing clear photography and a seamless checkout process.</p>
+                    <!-- 3. REPLACE THIS IMAGE SOURCE (src) with your project screenshot URL -->
+                    <img src="web2.png" alt="Web Design Preview 2" class="w-full h-auto rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/800x450/262626/fff?text=Web+Design+Preview+2';">
+                    <!-- 4. REPLACE THIS LINK (href) with your live project demo URL -->
+                    <a href="https://kobessoriano1-ops.github.io/verbose-rotary-phone/" target="_blank" class="inline-block bg-amber-600 hover:bg-amber-500 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300 mt-2">View Case Study / Demo</a>
+                </div>
+            </div>
+            <p class="text-center text-neutral-500 mt-10 italic">Create and bored.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer (updated color) -->
+    <footer class="bg-neutral-900 mt-12 p-6 text-center text-neutral-500">
+        <p>&copy; 2025 Kobe's Portfolio. Designed and Developed by Kobe.</p>
+        <p class="text-sm mt-1">Built with HTML and Tailwind CSS.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // --- Smooth Scrolling Function ---
+        function scrollToSection(targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const navHeight = document.getElementById('navbar').offsetHeight;
+                const targetPosition = targetElement.offsetTop - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
